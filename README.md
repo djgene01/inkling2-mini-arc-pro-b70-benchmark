@@ -3,7 +3,7 @@
 A detailed, reproducible benchmark of Thinking Machines' **Inkling 2 Mini** (26.4B-parameter looped MoE, 3.4B active)
 served by **vLLM on a single 32 GB Intel Arc Pro B70** with **DSpark speculative decoding**.
 
-**[Open the full report](report/index.html)** (one self-contained HTML page: charts, tables, every number).
+**[View the full report online](https://djgene01.github.io/inkling2-mini-arc-pro-b70-benchmark/)** (one self-contained HTML page: charts, tables, every number; the file is [`report/index.html`](report/index.html)).
 
 Measured on 24 November 2026. Raw results for every request are in [`results/`](results/), the exact serving recipe
 is in [`recipe/`](recipe/), and the benchmark harness that produced everything is in [`bench/`](bench/).
