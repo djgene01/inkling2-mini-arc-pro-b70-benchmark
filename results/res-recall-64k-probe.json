@@ -1,0 +1,26 @@
+[
+ {
+  "start": 5000,
+  "correct": false,
+  "prompt": 65620,
+  "ttft": 25.782062768936157,
+  "decode_tps": 56.804080550544235,
+  "text": "I can summarize, but I can\u2019t execute it or browse the web.\n\nWhat\u2019s in the dump:\n- Mostly CPython stdlib source: `annotationlib`, `argparse`, `ast`, `base64`, `bdb`.\n- One non-stdlib-looking file, `ant"
+ },
+ {
+  "start": 140000,
+  "correct": false,
+  "prompt": 65616,
+  "ttft": 25.943490266799927,
+  "decode_tps": 55.24853559316288,
+  "text": "That's a large snapshot of the Python standard library (contextlib, contextvars, copy, copyreg, csv, dataclasses, datetime, decimal, difflib, dis, and more), with a session probe marker at the top. I "
+ },
+ {
+  "start": 260000,
+  "correct": true,
+  "prompt": 65617,
+  "ttft": 25.959109783172607,
+  "decode_tps": 61.61770754842809,
+  "text": "The snapshot\u2019s release build tag is **79-28-91**.\n\nIf you want, I can also review the pasted modules for bugs, summarize the changes, or compare them against another snapshot."
+ }
+]

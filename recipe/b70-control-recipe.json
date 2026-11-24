@@ -1,0 +1,48 @@
+{
+  "id": "inkling2-mini-vllm",
+  "name": "Inkling 2 Mini · Vision · vLLM XPU · DSpark",
+  "description": "Thinking Machines' Inkling 2 Mini (26.4B looped MoE, 3.4B active), the unmodified native NVFP4/MXFP8 checkpoint (ed40e7da), on vLLM 0.34.0rc1.dev1133 XPU + mgaruccio/vllm-inkling2-xpu, following SergiioB's cookbook route (upstream d1e3506): vLLM PR #69186 patch, AOT bmg_g31 NVFP4 CUTLASS Xe2 MoE, SYCL decode attention, XPU vision tower, FP8 KV, DSpark k=7. 128K context. Sergio measured about 68 tok/s at 64K and 2,900 to 3,900 tok/s prompt reading with this profile on one B70. Prefix caching on (2026-11-24, checked against a cache-off baseline).",
+  "badge": "vLLM / Vision MoE",
+  "image": "b70-inkling-vllm:2026-11-23",
+  "container_name": "b70-inkling2-vllm",
+  "model_dir": "/path/to/models/Inkling-2-Mini",
+  "served_model_name": "inkling-2-mini",
+  "host_port": 8000,
+  "container_port": 8000,
+  "context_length": 131072,
+  "gpu_memory_utilization": 0.92,
+  "quantization": "",
+  "dtype": "bfloat16",
+  "kv_cache_dtype": "fp8",
+  "max_num_seqs": 1,
+  "max_num_batched_tokens": 2048,
+  "prefix_cache": true,
+  "vision": true,
+  "language_model_only": false,
+  "ipc_host": true,
+  "tool_call_parser": "inkling",
+  "speculative": {
+    "method": "dspark",
+    "num_speculative_tokens": 7
+  },
+  "patches": [],
+  "environment": {
+    "INK2_CUTLASS_MOE": "1",
+    "INK2_SYCL_DECODE_ATTN": "1",
+    "ZE_ENABLE_PCI_ID_DEVICE_ORDER": "1",
+    "VLLM_WORKER_MULTIPROC_METHOD": "spawn",
+    "VLLM_RPC_BASE_PATH": "/tmp/ink2-ipc"
+  },
+  "extra_args": [
+    "--reasoning-parser",
+    "inkling",
+    "--block-size",
+    "64",
+    "-cc.mode=none",
+    "-cc.cudagraph_mode=FULL_DECODE_ONLY",
+    "--limit-mm-per-prompt",
+    "{\"image\":4}",
+    "--enable-prompt-tokens-details"
+  ],
+  "restart": "unless-stopped"
+}

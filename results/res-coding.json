@@ -1,0 +1,480 @@
+{
+ "turns": [
+  {
+   "prompt": 542,
+   "cached": 0,
+   "completion": 36,
+   "reasoning": 9,
+   "ttft": 0.896794319152832,
+   "visible": 1.039170503616333,
+   "total": 1.0756964683532715,
+   "prefill_tps": 604.3749256931144,
+   "decode_tps": 195.637672081773,
+   "text": "",
+   "think_chars": 40,
+   "finish": "tool_calls",
+   "tool_calls": [
+    {
+     "name": "run_tests",
+     "arguments": "{}",
+     "id": "chatcmpl-tool-a33b8817cb2f1746"
+    }
+   ],
+   "t_start": 1795526983.2442913,
+   "t_end": 1795526984.3199878,
+   "spec": {
+    "drafts": 6.0,
+    "drafted": 42.0,
+    "accepted": 30.0,
+    "acceptance": 0.7142857142857143,
+    "mean_accepted_len": 6.0,
+    "per_pos": [
+     1.0,
+     1.0,
+     1.0,
+     0.6666666666666666,
+     0.5,
+     0.5,
+     0.3333333333333333
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 542.0,
+    "gen_tokens": 36.0
+   },
+   "energy_j": 240.94036900007632,
+   "j_per_tok": 6.692788027779898,
+   "avg_w": 223.98546066523724,
+   "temp_c": 92.0,
+   "turn": 1,
+   "tools_called": [
+    "run_tests"
+   ],
+   "tests": {
+    "ran": 0,
+    "ok": false
+   }
+  },
+  {
+   "prompt": 599,
+   "cached": 512,
+   "completion": 759,
+   "reasoning": 6,
+   "ttft": 0.16954636573791504,
+   "visible": 0.2740352153778076,
+   "total": 3.8875880241394043,
+   "prefill_tps": 513.1339714735301,
+   "decode_tps": 203.87076575303612,
+   "text": "",
+   "think_chars": 28,
+   "finish": "tool_calls",
+   "tool_calls": [
+    {
+     "name": "write_file",
+     "arguments": "{\"content\":\"import json\\n\\n\\nclass Inventory:\\n    def __init__(self):\\n        self._items = {}  # sku -> {\\\"qty\\\": int, \\\"price\\\": float}\\n\\n    def add(self, sku, qty, price):\\n        if qty <= 0:\\n            raise ValueError(\\\"qty must be positive\\\")\\n        if price < 0:\\n            raise ValueError(\\\"price must be non-negative\\\")\\n        if sku in self._items:\\n            self._items[sku][\\\"qty\\\"] += qty\\n            self._items[sku][\\\"price\\\"] = price\\n        else:\\n            self._items[sku] = {\\\"qty\\\": qty, \\\"price\\\": price}\\n\\n    def remove(self, sku, qty):\\n        if qty <= 0:\\n            raise ValueError(\\\"qty must be positive\\\")\\n        item = self._items.get(sku)\\n        if item is None or item[\\\"qty\\\"] < qty:\\n            raise ValueError(\\\"not enough stock\\\")\\n        item[\\\"qty\\\"] -= qty\\n        if item[\\\"qty\\\"] == 0:\\n            del self._items[sku]\\n\\n    def total_value(self):\\n        return sum(item[\\\"qty\\\"] * item[\\\"price\\\"] for item in self._items.values())\\n\\n    def low_stock(self, threshold):\\n        return sorted(\\n            (sku for sku, item in self._items.items() if item[\\\"qty\\\"] <= threshold),\\n            key=lambda sku: (self._items[sku][\\\"qty\\\"], sku),\\n        )\\n\\n    def to_json(self):\\n        return json.dumps({sku: dict(item) for sku, item in self._items.items()})\\n\\n    @classmethod\\n    def from_json(cls, data):\\n        inv = cls()\\n        for sku, item in json.loads(data).items():\\n            inv._items[sku] = {\\\"qty\\\": item[\\\"qty\\\"], \\\"price\\\": item[\\\"price\\\"]}\\n        return inv\\n\",\"path\":\"inventory/store.py\"}",
+     "id": "chatcmpl-tool-b77c3196abc5b655"
+    },
+    {
+     "name": "write_file",
+     "arguments": "{\"content\":\"from .store import Inventory\\n\\n__all__ = [\\\"Inventory\\\"]\\n\",\"path\":\"inventory/__init__.py\"}",
+     "id": "chatcmpl-tool-8437635c8dc0db10"
+    }
+   ],
+   "t_start": 1795526984.7686505,
+   "t_end": 1795526988.6562386,
+   "spec": {
+    "drafts": 107.0,
+    "drafted": 749.0,
+    "accepted": 652.0,
+    "acceptance": 0.8704939919893191,
+    "mean_accepted_len": 7.093457943925234,
+    "per_pos": [
+     0.9813084112149533,
+     0.9719626168224299,
+     0.897196261682243,
+     0.8598130841121495,
+     0.822429906542056,
+     0.8037383177570093,
+     0.7570093457943925
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 599.0,
+    "gen_tokens": 759.0
+   },
+   "energy_j": 885.144287000061,
+   "j_per_tok": 1.1661980065876956,
+   "avg_w": 227.68469331212262,
+   "temp_c": 92.0,
+   "turn": 2,
+   "tools_called": [
+    "write_file",
+    "write_file"
+   ]
+  },
+  {
+   "prompt": 1386,
+   "cached": 512,
+   "completion": 1033,
+   "reasoning": 0,
+   "ttft": 0.4104323387145996,
+   "visible": 0.4104323387145996,
+   "total": 5.899213552474976,
+   "prefill_tps": 2129.46183221627,
+   "decode_tps": 188.01988270415583,
+   "text": "",
+   "think_chars": 0,
+   "finish": "tool_calls",
+   "tool_calls": [
+    {
+     "name": "write_file",
+     "arguments": "{\"content\":\"import unittest\\n\\nfrom inventory import Inventory\\n\\n\\nclass TestInventory(unittest.TestCase):\\n    def test_add_and_total_value(self):\\n        inv = Inventory()\\n        inv.add(\\\"A\\\", 10, 2.5)\\n        inv.add(\\\"B\\\", 4, 1.5)\\n        self.assertEqual(inv.total_value(), 10 * 2.5 + 4 * 1.5)\\n\\n    def test_add_same_sku_accumulates(self):\\n        inv = Inventory()\\n        inv.add(\\\"A\\\", 5, 2.0)\\n        inv.add(\\\"A\\\", 3, 2.0)\\n        self.assertEqual(inv.total_value(), 8 * 2.0)\\n\\n    def test_add_invalid_qty_raises(self):\\n        inv = Inventory()\\n        with self.assertRaises(ValueError):\\n            inv.add(\\\"A\\\", 0, 1.0)\\n\\n    def test_add_negative_price_raises(self):\\n        inv = Inventory()\\n        with self.assertRaises(ValueError):\\n            inv.add(\\\"A\\\", 1, -1.0)\\n\\n    def test_remove_reduces_stock(self):\\n        inv = Inventory()\\n        inv.add(\\\"A\\\", 10, 2.0)\\n        inv.remove(\\\"A\\\", 4)\\n        self.assertEqual(inv.total_value(), 6 * 2.0)\\n\\n    def test_remove_too_much_raises(self):\\n        inv = Inventory()\\n        inv.add(\\\"A\\\", 3, 2.0)\\n        with self.assertRaises(ValueError):\\n            inv.remove(\\\"A\\\", 5)\\n\\n    def test_remove_missing_sku_raises(self):\\n        inv = Inventory()\\n        with self.assertRaises(ValueError):\\n            inv.remove(\\\"ZZZ\\\", 1)\\n\\n    def test_remove_all_deletes_sku(self):\\n        inv = Inventory()\\n        inv.add(\\\"A\\\", 2, 1.0)\\n        inv.remove(\\\"A\\\", 2)\\n        self.assertEqual(inv.total_value(), 0)\\n        self.assertEqual(inv.low_stock(10), [])\\n\\n    def test_low_stock_sorted_by_quantity(self):\\n        inv = Inventory()\\n        inv.add(\\\"A\\\", 5, 1.0)\\n        inv.add(\\\"B\\\", 2, 1.0)\\n        inv.add(\\\"C\\\", 8, 1.0)\\n        self.assertEqual(inv.low_stock(5), [\\\"B\\\", \\\"A\\\"])\\n\\n    def test_json_round_trip(self):\\n        inv = Inventory()\\n        inv.add(\\\"A\\\", 10, 2.5)\\n        inv.add(\\\"B\\\", 4, 1.5)\\n        inv2 = Inventory.from_json(inv.to_json())\\n        self.assertEqual(inv2.total_value(), inv.total_value())\\n        self.assertEqual(inv2.low_stock(10), inv.low_stock(10))\\n\\n\\nif __name__ == \\\"__main__\\\":\\n    unittest.main()\\n\",\"path\":\"tests/test_store.py\"}",
+     "id": "chatcmpl-tool-a98bee4c98f9d61a"
+    }
+   ],
+   "t_start": 1795526988.6687715,
+   "t_end": 1795526994.567985,
+   "spec": {
+    "drafts": 156.0,
+    "drafted": 1092.0,
+    "accepted": 877.0,
+    "acceptance": 0.8031135531135531,
+    "mean_accepted_len": 6.621794871794871,
+    "per_pos": [
+     0.9743589743589743,
+     0.9294871794871795,
+     0.8333333333333334,
+     0.7884615384615384,
+     0.7371794871794872,
+     0.6923076923076923,
+     0.6666666666666666
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 1386.0,
+    "gen_tokens": 1033.0
+   },
+   "energy_j": 1353.101622999995,
+   "j_per_tok": 1.3098757241045451,
+   "avg_w": 229.36983226049009,
+   "temp_c": 94.0,
+   "turn": 3,
+   "tools_called": [
+    "write_file"
+   ]
+  },
+  {
+   "prompt": 2439,
+   "cached": 1280,
+   "completion": 24,
+   "reasoning": 0,
+   "ttft": 0.4650990962982178,
+   "visible": 0.4650990962982178,
+   "total": 0.5024838447570801,
+   "prefill_tps": 2491.9420597129233,
+   "decode_tps": null,
+   "text": "",
+   "think_chars": 0,
+   "finish": "tool_calls",
+   "tool_calls": [
+    {
+     "name": "run_tests",
+     "arguments": "{}",
+     "id": "chatcmpl-tool-9aa21eb112bb2bc4"
+    }
+   ],
+   "t_start": 1795526994.5870638,
+   "t_end": 1795526995.0895476,
+   "spec": {
+    "drafts": 3.0,
+    "drafted": 21.0,
+    "accepted": 21.0,
+    "acceptance": 1.0,
+    "mean_accepted_len": 8.0,
+    "per_pos": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 2439.0,
+    "gen_tokens": 24.0
+   },
+   "energy_j": 120.63458299997728,
+   "j_per_tok": 5.026440958332387,
+   "avg_w": 240.07654028816918,
+   "temp_c": 94.0,
+   "turn": 4,
+   "tools_called": [
+    "run_tests"
+   ],
+   "tests": {
+    "ran": 0,
+    "ok": false
+   }
+  },
+  {
+   "prompt": 2496,
+   "cached": 2432,
+   "completion": 147,
+   "reasoning": 120,
+   "ttft": 0.21922659873962402,
+   "visible": 1.9982616901397705,
+   "total": 2.068286418914795,
+   "prefill_tps": 291.9353781336222,
+   "decode_tps": 78.95904632559085,
+   "text": "",
+   "think_chars": 517,
+   "finish": "tool_calls",
+   "tool_calls": [
+    {
+     "name": "run_tests",
+     "arguments": "{}",
+     "id": "chatcmpl-tool-924f46ef6946114d"
+    }
+   ],
+   "t_start": 1795526995.6469665,
+   "t_end": 1795526997.7152529,
+   "spec": {
+    "drafts": 54.0,
+    "drafted": 378.0,
+    "accepted": 93.0,
+    "acceptance": 0.24603174603174602,
+    "mean_accepted_len": 2.7222222222222223,
+    "per_pos": [
+     0.5925925925925926,
+     0.37037037037037035,
+     0.25925925925925924,
+     0.18518518518518517,
+     0.16666666666666666,
+     0.09259259259259259,
+     0.05555555555555555
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 2496.0,
+    "gen_tokens": 147.0
+   },
+   "energy_j": 456.18243499996606,
+   "j_per_tok": 3.1032818707480683,
+   "avg_w": 220.5605717023078,
+   "temp_c": 92.0,
+   "turn": 5,
+   "tools_called": [
+    "run_tests"
+   ],
+   "tests": {
+    "ran": 0,
+    "ok": false
+   }
+  },
+  {
+   "prompt": 2553,
+   "cached": 2432,
+   "completion": 156,
+   "reasoning": 109,
+   "ttft": 0.32293105125427246,
+   "visible": 2.039762496948242,
+   "total": 2.217414617538452,
+   "prefill_tps": 374.6929864131458,
+   "decode_tps": 81.81649224015987,
+   "text": "",
+   "think_chars": 428,
+   "finish": "tool_calls",
+   "tool_calls": [
+    {
+     "name": "write_file",
+     "arguments": "{\"content\":\"\",\"path\":\"tests/__init__.py\"}",
+     "id": "chatcmpl-tool-ac2a5dd943fb02c7"
+    }
+   ],
+   "t_start": 1795526998.1321137,
+   "t_end": 1795527000.3495283,
+   "spec": {
+    "drafts": 55.0,
+    "drafted": 385.0,
+    "accepted": 101.0,
+    "acceptance": 0.2623376623376623,
+    "mean_accepted_len": 2.8363636363636364,
+    "per_pos": [
+     0.6545454545454545,
+     0.32727272727272727,
+     0.21818181818181817,
+     0.16363636363636364,
+     0.16363636363636364,
+     0.16363636363636364,
+     0.14545454545454545
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 2553.0,
+    "gen_tokens": 156.0
+   },
+   "energy_j": 477.04699699999765,
+   "j_per_tok": 3.0579935705128056,
+   "avg_w": 215.13657988309225,
+   "temp_c": 92.0,
+   "turn": 6,
+   "tools_called": [
+    "write_file"
+   ]
+  },
+  {
+   "prompt": 2616,
+   "cached": 2432,
+   "completion": 24,
+   "reasoning": 0,
+   "ttft": 0.3462972640991211,
+   "visible": 0.3462972640991211,
+   "total": 0.3837704658508301,
+   "prefill_tps": 531.3354134594995,
+   "decode_tps": null,
+   "text": "",
+   "think_chars": 0,
+   "finish": "tool_calls",
+   "tool_calls": [
+    {
+     "name": "run_tests",
+     "arguments": "{}",
+     "id": "chatcmpl-tool-9adcfa28c2104dd8"
+    }
+   ],
+   "t_start": 1795527000.3628175,
+   "t_end": 1795527000.746588,
+   "spec": {
+    "drafts": 3.0,
+    "drafted": 21.0,
+    "accepted": 21.0,
+    "acceptance": 1.0,
+    "mean_accepted_len": 8.0,
+    "per_pos": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 2616.0,
+    "gen_tokens": 24.0
+   },
+   "energy_j": 71.00768999999855,
+   "j_per_tok": 2.9586537499999395,
+   "avg_w": 185.02645804849124,
+   "temp_c": 92.0,
+   "turn": 7,
+   "tools_called": [
+    "run_tests"
+   ],
+   "tests": {
+    "ran": 10,
+    "ok": true
+   }
+  },
+  {
+   "prompt": 2997,
+   "cached": 2560,
+   "completion": 156,
+   "reasoning": 2,
+   "ttft": 0.28237009048461914,
+   "visible": 0.31521129608154297,
+   "total": 1.2667603492736816,
+   "prefill_tps": 1547.6143356755542,
+   "decode_tps": 157.4578767070203,
+   "text": "All 10 tests pass. Created:\n\n- `inventory/store.py` \u2014 `Inventory` class with `add`, `remove` (raises `ValueError` on insufficient stock), `total_value`, `low_stock` (sorted by quantity), and `to_json`/`from_json` round-trip.\n- `inventory/__init__.py` \u2014 exports `Inventory`.\n- `tests/test_store.py` \u2014 10 unittest tests covering normal use, error cases, and JSON round-trip.\n\nNote: `tests/__init__.py` ",
+   "think_chars": 5,
+   "finish": "stop",
+   "tool_calls": [],
+   "t_start": 1795527001.191738,
+   "t_end": 1795527002.4584982,
+   "spec": {
+    "drafts": 29.0,
+    "drafted": 203.0,
+    "accepted": 128.0,
+    "acceptance": 0.6305418719211823,
+    "mean_accepted_len": 5.413793103448276,
+    "per_pos": [
+     0.8620689655172413,
+     0.8275862068965517,
+     0.7241379310344828,
+     0.6206896551724138,
+     0.5517241379310345,
+     0.4482758620689655,
+     0.3793103448275862
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 2997.0,
+    "gen_tokens": 156.0
+   },
+   "energy_j": 278.94909599993844,
+   "j_per_tok": 1.788135230768836,
+   "avg_w": 220.2066840502851,
+   "temp_c": 92.0,
+   "turn": 8,
+   "tools_called": []
+  }
+ ],
+ "passed": true,
+ "tests_ran": 10,
+ "files": [
+  "inventory/__init__.py",
+  "inventory/store.py",
+  "tests/__init__.py",
+  "tests/test_store.py"
+ ],
+ "lines": 119,
+ "wall_s": 19.711008548736572,
+ "final_tests": "test_add_and_total_value (tests.test_store.TestInventory.test_add_and_total_value) ... ok\ntest_add_invalid_qty_raises (tests.test_store.TestInventory.test_add_invalid_qty_raises) ... ok\ntest_add_negative_price_raises (tests.test_store.TestInventory.test_add_negative_price_raises) ... ok\ntest_add_same_sku_accumulates (tests.test_store.TestInventory.test_add_same_sku_accumulates) ... ok\ntest_json_round_trip (tests.test_store.TestInventory.test_json_round_trip) ... ok\ntest_low_stock_sorted_by_quantity (tests.test_store.TestInventory.test_low_stock_sorted_by_quantity) ... ok\ntest_remove_all_deletes_sku (tests.test_store.TestInventory.test_remove_all_deletes_sku) ... ok\ntest_remove_missing_sku_raises (tests.test_store.TestInventory.test_remove_missing_sku_raises) ... ok\ntest_remove_reduces_stock (tests.test_store.TestInventory.test_remove_reduces_stock) ... ok\ntest_remove_too_much_raises (tests.test_store.TestInventory.test_remove_too_much_raises) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.001s\n\nOK\n",
+ "summary": {
+  "ttft": {
+   "median": 0.3346141576766968,
+   "min": 0.16954636573791504,
+   "max": 0.896794319152832,
+   "mean": 0.38908714056015015,
+   "n": 8
+  },
+  "visible": {
+   "median": 0.4377657175064087,
+   "min": 0.2740352153778076,
+   "max": 2.039762496948242,
+   "mean": 0.8610337376594543,
+   "n": 8
+  },
+  "prefill_tps": {
+   "median": 567.8551695763069,
+   "min": 291.9353781336222,
+   "max": 2491.9420597129233,
+   "mean": 1060.5613628472074,
+   "n": 8
+  },
+  "decode_tps": {
+   "median": 172.73887970558806,
+   "min": 78.95904632559085,
+   "max": 203.87076575303612,
+   "mean": 150.960289301956,
+   "n": 6
+  },
+  "total": {
+   "median": 1.6675233840942383,
+   "min": 0.3837704658508301,
+   "max": 5.899213552474976,
+   "mean": 2.1626517176628113,
+   "n": 8
+  },
+  "j_per_tok": {
+   "median": 3.0083236602563725,
+   "min": 1.1661980065876956,
+   "max": 6.692788027779898,
+   "mean": 3.1379208923542716,
+   "n": 8
+  },
+  "acceptance": 0.6651677620200622,
+  "mean_accepted_len": 5.656174334140436
+ },
+ "_phase": {
+  "name": "coding",
+  "seconds": 19.72185492515564,
+  "server_requests": 8.0
+ }
+}

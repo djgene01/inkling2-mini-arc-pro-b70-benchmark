@@ -1,0 +1,30 @@
+[
+ {
+  "n": 65536,
+  "start": 5000,
+  "prompt": 65622,
+  "correct": false,
+  "text": "That looks like a snapshot of CPython stdlib sources (`annotationlib`, `argparse`, `ast`, `base64`, `bdb`) plus one small non-stdlib file, `antigravity.py`. I d"
+ },
+ {
+  "n": 65536,
+  "start": 140000,
+  "prompt": 65619,
+  "correct": false,
+  "text": "That's a large snapshot of CPython stdlib source (contextlib, contextvars, copy, copyreg, csv, dataclasses, datetime, decimal, difflib, dis). I don't see an exp"
+ },
+ {
+  "n": 65536,
+  "start": 5000,
+  "prompt": 65622,
+  "correct": false,
+  "text": "That's a large dump of CPython stdlib source (annotationlib, argparse, ast, base64, bdb) plus a small `antigravity.py`. I haven't run anything. Here's a quick r"
+ },
+ {
+  "n": 65536,
+  "start": 140000,
+  "prompt": 65619,
+  "correct": true,
+  "text": "That looks like a snapshot of a large portion of the Python standard library (parts of `contextlib`, `contextvars`, `copy`, `copyreg`, `csv`, `dataclasses`, `da"
+ }
+]

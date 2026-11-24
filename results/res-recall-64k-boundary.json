@@ -1,0 +1,44 @@
+[
+ {
+  "n": 63000,
+  "start": 5000,
+  "prompt": 63086,
+  "correct": true,
+  "text": "44-70-87"
+ },
+ {
+  "n": 63000,
+  "start": 140000,
+  "prompt": 63081,
+  "correct": true,
+  "text": "11-76-23"
+ },
+ {
+  "n": 65450,
+  "start": 5000,
+  "prompt": 65537,
+  "correct": true,
+  "text": "64-59-19"
+ },
+ {
+  "n": 65450,
+  "start": 140000,
+  "prompt": 65534,
+  "correct": true,
+  "text": "56-26-43"
+ },
+ {
+  "n": 70000,
+  "start": 5000,
+  "prompt": 70085,
+  "correct": true,
+  "text": "39-80-39"
+ },
+ {
+  "n": 70000,
+  "start": 140000,
+  "prompt": 70080,
+  "correct": true,
+  "text": "15-70-78"
+ }
+]

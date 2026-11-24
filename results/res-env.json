@@ -1,0 +1,45 @@
+{
+ "date": "2026-11-24 15:16",
+ "kernel": "7.0.0-44-generic",
+ "os": "Ubuntu 26.04 LTS",
+ "cpu": "AMD Ryzen 7 3700X 8-Core Processor",
+ "ram_gb": "60",
+ "power_cap_w": 230.0,
+ "vllm": "0.34.0rc1.dev1133+g647a76866",
+ "torch": "2.15.0+xpu",
+ "compute_runtime": "26.18.38308.1-1~24.04~ppa1",
+ "image": "b70-inkling-vllm:2026-11-23",
+ "context": 131072,
+ "max_num_seqs": 1,
+ "kv_cache_dtype": "fp8",
+ "speculative": {
+  "method": "dspark",
+  "num_speculative_tokens": 7
+ },
+ "environment": {
+  "INK2_CUTLASS_MOE": "1",
+  "INK2_SYCL_DECODE_ATTN": "1",
+  "ZE_ENABLE_PCI_ID_DEVICE_ORDER": "1",
+  "VLLM_WORKER_MULTIPROC_METHOD": "spawn",
+  "VLLM_RPC_BASE_PATH": "/tmp/ink2-ipc"
+ },
+ "prefix_cache": true,
+ "gpu_memory_utilization": 0.92,
+ "max_num_batched_tokens": 2048,
+ "extra_args": [
+  "--reasoning-parser",
+  "inkling",
+  "--block-size",
+  "64",
+  "-cc.mode=none",
+  "-cc.cudagraph_mode=FULL_DECODE_ONLY",
+  "--limit-mm-per-prompt",
+  "{\"image\":4}",
+  "--enable-prompt-tokens-details"
+ ],
+ "_phase": {
+  "name": "env",
+  "seconds": 3.7361373901367188,
+  "server_requests": 0.0
+ }
+}

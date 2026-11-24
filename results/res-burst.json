@@ -1,0 +1,1527 @@
+{
+ "runs": [
+  {
+   "prompt": 28,
+   "cached": 0,
+   "completion": 209,
+   "reasoning": 129,
+   "ttft": 0.13713765144348145,
+   "visible": 2.157358169555664,
+   "total": 2.8548028469085693,
+   "prefill_tps": 204.17441676503876,
+   "decode_tps": 76.53628575995502,
+   "text": "Earth\u2019s axis is tilted about 23.5 degrees relative to its orbit around the Sun. As Earth orbits, each hemisphere tilts toward the Sun at different times of year, receiving more direct sunlight and longer days. This changes sunlight intensity and day length, producing the seasons\u2014not Earth\u2019s changing distance from the Sun.",
+   "think_chars": 574,
+   "finish": "stop",
+   "tool_calls": [],
+   "t_start": 1795526407.396936,
+   "t_end": 1795526410.2517388,
+   "spec": {
+    "drafts": 83.0,
+    "drafted": 581.0,
+    "accepted": 126.0,
+    "acceptance": 0.21686746987951808,
+    "mean_accepted_len": 2.5180722891566267,
+    "per_pos": [
+     0.6024096385542169,
+     0.37349397590361444,
+     0.1927710843373494,
+     0.1566265060240964,
+     0.08433734939759036,
+     0.07228915662650602,
+     0.03614457831325301
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 28.0,
+    "gen_tokens": 209.0
+   },
+   "energy_j": 648.7763070000219,
+   "j_per_tok": 3.104192856459435,
+   "avg_w": 227.2578324288046,
+   "temp_c": 92.0,
+   "kind": "chat",
+   "effort": "low"
+  },
+  {
+   "prompt": 31,
+   "cached": 0,
+   "completion": 162,
+   "reasoning": 121,
+   "ttft": 0.14808368682861328,
+   "visible": 2.0896198749542236,
+   "total": 2.457380533218384,
+   "prefill_tps": 209.34108721832595,
+   "decode_tps": 69.71819160091898,
+   "text": "1. Midnight Blue Hour  \n2. The Velvet Hour  \n3. After Hours Jazz  \n4. Night Swing  \n5. The Late Set",
+   "think_chars": 487,
+   "finish": "stop",
+   "tool_calls": [],
+   "t_start": 1795526410.2648127,
+   "t_end": 1795526412.7221932,
+   "spec": {
+    "drafts": 71.0,
+    "drafted": 497.0,
+    "accepted": 92.0,
+    "acceptance": 0.1851106639839034,
+    "mean_accepted_len": 2.295774647887324,
+    "per_pos": [
+     0.5211267605633803,
+     0.3380281690140845,
+     0.19718309859154928,
+     0.1267605633802817,
+     0.09859154929577464,
+     0.014084507042253521,
+     0.0
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 31.0,
+    "gen_tokens": 162.0
+   },
+   "energy_j": 560.3779909999575,
+   "j_per_tok": 3.4591234012343057,
+   "avg_w": 228.0387524133437,
+   "temp_c": 92.0,
+   "kind": "chat",
+   "effort": "low"
+  },
+  {
+   "prompt": 35,
+   "cached": 0,
+   "completion": 276,
+   "reasoning": 83,
+   "ttft": 0.22770380973815918,
+   "visible": 1.149106740951538,
+   "total": 2.4198379516601562,
+   "prefill_tps": 153.70845151974905,
+   "decode_tps": 125.44852741488178,
+   "text": "```python\ndef fibonacci(n):\n    \"\"\"\n    Return the n-th Fibonacci number iteratively.\n\n    Uses the convention F(0) = 0 and F(1) = 1.\n\n    Args:\n        n (int): Non-negative index of the Fibonacci number.\n\n    Returns:\n        int: The n-th Fibonacci number.\n\n    Raises:\n        ValueError: If n is negative.\n    \"\"\"\n    if n < 0:\n        raise ValueError(\"n must be non-negative\")\n    if n < 2:\n  ",
+   "think_chars": 372,
+   "finish": "stop",
+   "tool_calls": [],
+   "t_start": 1795526412.734693,
+   "t_end": 1795526415.154531,
+   "spec": {
+    "drafts": 67.0,
+    "drafted": 469.0,
+    "accepted": 212.0,
+    "acceptance": 0.4520255863539446,
+    "mean_accepted_len": 4.164179104477611,
+    "per_pos": [
+     0.8507462686567164,
+     0.6567164179104478,
+     0.5373134328358209,
+     0.373134328358209,
+     0.29850746268656714,
+     0.23880597014925373,
+     0.208955223880597
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 35.0,
+    "gen_tokens": 276.0
+   },
+   "energy_j": 541.6467279999633,
+   "j_per_tok": 1.9624881449274034,
+   "avg_w": 223.83595051410805,
+   "temp_c": 92.0,
+   "kind": "code",
+   "effort": "low"
+  },
+  {
+   "prompt": 40,
+   "cached": 0,
+   "completion": 204,
+   "reasoning": 50,
+   "ttft": 0.18481159210205078,
+   "visible": 0.881540060043335,
+   "total": 2.328685760498047,
+   "prefill_tps": 216.43663985055912,
+   "decode_tps": 94.68839309346245,
+   "text": "```js\nfunction debounce(fn, ms) {\n  let t;\n  return function (...args) {\n    clearTimeout(t);\n    t = setTimeout(() => fn.apply(this, args), ms);\n  };\n}\n```\n\nUsage:\n\n```js\nconst onSearch = debounce((e) => {\n  console.log('Searching for:', e.target.value);\n}, 300);\n\ninput.addEventListener('input', onSearch);\n```\n\nThis waits until the user stops typing for `ms` milliseconds before calling `fn`.",
+   "think_chars": 231,
+   "finish": "stop",
+   "tool_calls": [],
+   "t_start": 1795526415.166754,
+   "t_end": 1795526417.4954398,
+   "spec": {
+    "drafts": 65.0,
+    "drafted": 455.0,
+    "accepted": 141.0,
+    "acceptance": 0.3098901098901099,
+    "mean_accepted_len": 3.169230769230769,
+    "per_pos": [
+     0.676923076923077,
+     0.47692307692307695,
+     0.36923076923076925,
+     0.24615384615384617,
+     0.2,
+     0.13846153846153847,
+     0.06153846153846154
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 40.0,
+    "gen_tokens": 204.0
+   },
+   "energy_j": 528.1116330000223,
+   "j_per_tok": 2.5887825147059913,
+   "avg_w": 226.78527174360897,
+   "temp_c": 92.0,
+   "kind": "code",
+   "effort": "low"
+  },
+  {
+   "prompt": 40,
+   "cached": 0,
+   "completion": 177,
+   "reasoning": 94,
+   "ttft": 0.21921873092651367,
+   "visible": 1.3544485569000244,
+   "total": 2.0061137676239014,
+   "prefill_tps": 182.46615985295878,
+   "decode_tps": 98.49487316574027,
+   "text": "```sql\nSELECT customer_id, SUM(amount) AS total_order_value\nFROM orders\nGROUP BY customer_id\nORDER BY total_order_value DESC\nLIMIT 3;\n```\n\nFor SQL Server, use `TOP 3` instead of `LIMIT 3`; for Oracle, use `FETCH FIRST 3 ROWS ONLY`.",
+   "think_chars": 395,
+   "finish": "stop",
+   "tool_calls": [],
+   "t_start": 1795526417.5135498,
+   "t_end": 1795526419.5196636,
+   "spec": {
+    "drafts": 54.0,
+    "drafted": 378.0,
+    "accepted": 124.0,
+    "acceptance": 0.328042328042328,
+    "mean_accepted_len": 3.2962962962962963,
+    "per_pos": [
+     0.6666666666666666,
+     0.5,
+     0.4074074074074074,
+     0.2962962962962963,
+     0.2222222222222222,
+     0.12962962962962962,
+     0.07407407407407407
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 40.0,
+    "gen_tokens": 177.0
+   },
+   "energy_j": 449.06164500000887,
+   "j_per_tok": 2.5370714406780164,
+   "avg_w": 223.84654960615237,
+   "temp_c": 94.0,
+   "kind": "code",
+   "effort": "low"
+  },
+  {
+   "prompt": 34,
+   "cached": 0,
+   "completion": 163,
+   "reasoning": 48,
+   "ttft": 0.18006253242492676,
+   "visible": 1.0031795501708984,
+   "total": 2.411836624145508,
+   "prefill_tps": 188.82329123175904,
+   "decode_tps": 72.58799203780812,
+   "text": "Sure\u2014try: \u201cThanks for letting us know what you need. Unfortunately, this one doesn\u2019t fit our current guidelines, so I\u2019m not able to approve it. If you\u2019d like, I can help you find a similar option or explain what would be allowed.\u201d\n\nShorter version: \u201cI get that this is important, but it doesn\u2019t meet our current policy, so I\u2019m not able to approve it. I can help you look at a workable alternative if ",
+   "think_chars": 211,
+   "finish": "stop",
+   "tool_calls": [],
+   "t_start": 1795526419.5320272,
+   "t_end": 1795526421.9438639,
+   "spec": {
+    "drafts": 69.0,
+    "drafted": 483.0,
+    "accepted": 95.0,
+    "acceptance": 0.19668737060041408,
+    "mean_accepted_len": 2.3768115942028984,
+    "per_pos": [
+     0.6086956521739131,
+     0.34782608695652173,
+     0.2318840579710145,
+     0.11594202898550725,
+     0.057971014492753624,
+     0.014492753623188406,
+     0.0
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 34.0,
+    "gen_tokens": 163.0
+   },
+   "energy_j": 545.1780399999698,
+   "j_per_tok": 3.344650552147054,
+   "avg_w": 226.04269067898474,
+   "temp_c": 94.0,
+   "kind": "rewrite",
+   "effort": "low"
+  },
+  {
+   "prompt": 34,
+   "cached": 0,
+   "completion": 273,
+   "reasoning": 234,
+   "ttft": 0.16506195068359375,
+   "visible": 3.6350901126861572,
+   "total": 4.004658222198486,
+   "prefill_tps": 205.98326785301595,
+   "decode_tps": 70.8407813649334,
+   "text": "French: Le serveur red\u00e9marrera \u00e0 minuit pour une maintenance.  \nGerman: Der Server wird um Mitternacht f\u00fcr Wartung neu gestartet.",
+   "think_chars": 946,
+   "finish": "stop",
+   "tool_calls": [],
+   "t_start": 1795526421.9564946,
+   "t_end": 1795526425.9611528,
+   "spec": {
+    "drafts": 115.0,
+    "drafted": 805.0,
+    "accepted": 159.0,
+    "acceptance": 0.19751552795031055,
+    "mean_accepted_len": 2.382608695652174,
+    "per_pos": [
+     0.5565217391304348,
+     0.3565217391304348,
+     0.22608695652173913,
+     0.11304347826086956,
+     0.06956521739130435,
+     0.043478260869565216,
+     0.017391304347826087
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 34.0,
+    "gen_tokens": 273.0
+   },
+   "energy_j": 914.4647209999966,
+   "j_per_tok": 3.3496876227106105,
+   "avg_w": 228.35025369480138,
+   "temp_c": 94.0,
+   "kind": "translate",
+   "effort": "low"
+  },
+  {
+   "prompt": 47,
+   "cached": 0,
+   "completion": 246,
+   "reasoning": 81,
+   "ttft": 0.16870903968811035,
+   "visible": 0.8811428546905518,
+   "total": 2.2920427322387695,
+   "prefill_tps": 278.5861391119772,
+   "decode_tps": 115.38459586429546,
+   "text": "Average speed = distance \u00f7 time\n\n- Distance = 180 km  \n- Time = 2.5 h  \n\n\\[\nv=\\frac{180}{2.5}=72\\text{ km/h}\n\\]\n\nConvert km/h to m/s:\n\n\\[\n72\\text{ km/h}\\times \\frac{1000\\text{ m}}{1\\text{ km}}\\times \\frac{1\\text{ h}}{3600\\text{ s}}\n=72\\times \\frac{1000}{3600}\n=20\\text{ m/s}\n\\]\n\n**Answer: 72 km/h = 20 m/s**",
+   "think_chars": 260,
+   "finish": "stop",
+   "tool_calls": [],
+   "t_start": 1795526425.973515,
+   "t_end": 1795526428.2655578,
+   "spec": {
+    "drafts": 67.0,
+    "drafted": 469.0,
+    "accepted": 180.0,
+    "acceptance": 0.3837953091684435,
+    "mean_accepted_len": 3.6865671641791047,
+    "per_pos": [
+     0.746268656716418,
+     0.6119402985074627,
+     0.47761194029850745,
+     0.3582089552238806,
+     0.208955223880597,
+     0.16417910447761194,
+     0.11940298507462686
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 47.0,
+    "gen_tokens": 246.0
+   },
+   "energy_j": 518.4766850000015,
+   "j_per_tok": 2.107628800813014,
+   "avg_w": 226.20725072327755,
+   "temp_c": 94.0,
+   "kind": "math",
+   "effort": "low"
+  },
+  {
+   "prompt": 31,
+   "cached": 0,
+   "completion": 193,
+   "reasoning": 78,
+   "ttft": 0.17282629013061523,
+   "visible": 1.425532341003418,
+   "total": 3.067329168319702,
+   "prefill_tps": 179.37085831427285,
+   "decode_tps": 66.33263398933728,
+   "text": "A mutex is like a single key to a shared room.\n\nOnly one person can hold the key at a time. If a thread wants to use a shared resource\u2014like a file, a counter, or a database row\u2014it must \u201clock\u201d the mutex first. While it holds the lock, other threads wait. When it\u2019s done, it \u201cunlocks\u201d the mutex, and someone else can use the resource.\n\nIn short: a mutex prevents two threads from messing with the same ",
+   "think_chars": 347,
+   "finish": "stop",
+   "tool_calls": [],
+   "t_start": 1795526428.2780614,
+   "t_end": 1795526431.3453906,
+   "spec": {
+    "drafts": 89.0,
+    "drafted": 623.0,
+    "accepted": 106.0,
+    "acceptance": 0.17014446227929375,
+    "mean_accepted_len": 2.191011235955056,
+    "per_pos": [
+     0.5730337078651685,
+     0.29213483146067415,
+     0.16853932584269662,
+     0.0898876404494382,
+     0.02247191011235955,
+     0.02247191011235955,
+     0.02247191011235955
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 31.0,
+    "gen_tokens": 193.0
+   },
+   "energy_j": 697.2397460000357,
+   "j_per_tok": 3.6126411709846407,
+   "avg_w": 227.31167988142172,
+   "temp_c": 94.0,
+   "kind": "explain",
+   "effort": "low"
+  },
+  {
+   "prompt": 35,
+   "cached": 0,
+   "completion": 142,
+   "reasoning": 85,
+   "ttft": 0.1760578155517578,
+   "visible": 1.1107299327850342,
+   "total": 1.3516290187835693,
+   "prefill_tps": 198.79833161800553,
+   "decode_tps": 119.94169269574745,
+   "text": "{\"title\":\"The Great Gatsby\",\"author\":\"F. Scott Fitzgerald\",\"year\":1925,\"tags\":[\"classic\",\"novel\",\"jazz age\"]}",
+   "think_chars": 318,
+   "finish": "stop",
+   "tool_calls": [],
+   "t_start": 1795526431.3638444,
+   "t_end": 1795526432.7154734,
+   "spec": {
+    "drafts": 36.0,
+    "drafted": 252.0,
+    "accepted": 107.0,
+    "acceptance": 0.4246031746031746,
+    "mean_accepted_len": 3.9722222222222223,
+    "per_pos": [
+     0.8055555555555556,
+     0.6111111111111112,
+     0.5277777777777778,
+     0.3333333333333333,
+     0.25,
+     0.2222222222222222,
+     0.2222222222222222
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 35.0,
+    "gen_tokens": 142.0
+   },
+   "energy_j": 302.1870720000006,
+   "j_per_tok": 2.12807797183099,
+   "avg_w": 223.57249496756222,
+   "temp_c": 94.0,
+   "kind": "json",
+   "effort": "low"
+  },
+  {
+   "prompt": 38,
+   "cached": 0,
+   "completion": 336,
+   "reasoning": 190,
+   "ttft": 0.16541123390197754,
+   "visible": 3.2396833896636963,
+   "total": 4.968150854110718,
+   "prefill_tps": 229.73046693139807,
+   "decode_tps": 69.75185550147313,
+   "text": "- **SQLite pros:** zero setup, single-file DB, easy deploy/backup, great for low-to-moderate traffic.  \n- **SQLite cons:** weaker under many concurrent writers, limited advanced features/extensions, less suitable for multi-instance or high-write apps.  \n- **PostgreSQL pros:** strong concurrency, scalability, rich features/extensions, better for growing/multi-user apps.  \n- **PostgreSQL cons:** nee",
+   "think_chars": 804,
+   "finish": "stop",
+   "tool_calls": [],
+   "t_start": 1795526432.7280254,
+   "t_end": 1795526437.6961763,
+   "spec": {
+    "drafts": 147.0,
+    "drafted": 1029.0,
+    "accepted": 190.0,
+    "acceptance": 0.184645286686103,
+    "mean_accepted_len": 2.292517006802721,
+    "per_pos": [
+     0.6190476190476191,
+     0.32653061224489793,
+     0.1564625850340136,
+     0.10204081632653061,
+     0.04081632653061224,
+     0.027210884353741496,
+     0.02040816326530612
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 38.0,
+    "gen_tokens": 336.0
+   },
+   "energy_j": 1133.460327000008,
+   "j_per_tok": 3.3733938303571667,
+   "avg_w": 228.14531206558814,
+   "temp_c": 94.0,
+   "kind": "summary",
+   "effort": "low"
+  },
+  {
+   "prompt": 36,
+   "cached": 0,
+   "completion": 405,
+   "reasoning": 216,
+   "ttft": 0.16430449485778809,
+   "visible": 3.325089931488037,
+   "total": 4.706675291061401,
+   "prefill_tps": 219.10538741596446,
+   "decode_tps": 88.94033933505646,
+   "text": "```bash\nfind . -name '*.py' -print0 | xargs -0 cat | wc -l\n```\n\n- `find . -name '*.py'` recursively finds Python files under the current directory.\n- `-print0` makes filenames NUL-delimited, so names with spaces/newlines are handled safely.\n- `xargs -0 cat` feeds those files to `cat`, concatenating them.\n- `wc -l` counts the total number of lines.\n\nNote: this counts all lines, including blanks and",
+   "think_chars": 842,
+   "finish": "stop",
+   "tool_calls": [],
+   "t_start": 1795526437.70829,
+   "t_end": 1795526442.4149654,
+   "spec": {
+    "drafts": 137.0,
+    "drafted": 959.0,
+    "accepted": 269.0,
+    "acceptance": 0.2805005213764338,
+    "mean_accepted_len": 2.9635036496350367,
+    "per_pos": [
+     0.6642335766423357,
+     0.45255474452554745,
+     0.30656934306569344,
+     0.22627737226277372,
+     0.1386861313868613,
+     0.10218978102189781,
+     0.072992700729927
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 36.0,
+    "gen_tokens": 405.0
+   },
+   "energy_j": 1075.7832030000282,
+   "j_per_tok": 2.6562548222222917,
+   "avg_w": 228.56541751309734,
+   "temp_c": 94.0,
+   "kind": "shell",
+   "effort": "low"
+  },
+  {
+   "prompt": 28,
+   "cached": 0,
+   "completion": 283,
+   "reasoning": 196,
+   "ttft": 0.15107989311218262,
+   "visible": 2.8591225147247314,
+   "total": 3.22413969039917,
+   "prefill_tps": 185.33240541286938,
+   "decode_tps": 91.76521727594113,
+   "text": "Earth's seasons are caused by the tilt of its rotational axis as it orbits the Sun. That tilt means one hemisphere is tilted toward the Sun\u2014receiving more direct light and longer days\u2014while the other is tilted away. As Earth travels around the Sun, the hemisphere receiving the most sunlight changes, producing spring, summer, autumn, and winter.",
+   "think_chars": 855,
+   "finish": "stop",
+   "tool_calls": [],
+   "t_start": 1795526442.4272363,
+   "t_end": 1795526445.651376,
+   "spec": {
+    "drafts": 95.0,
+    "drafted": 665.0,
+    "accepted": 189.0,
+    "acceptance": 0.28421052631578947,
+    "mean_accepted_len": 2.9894736842105263,
+    "per_pos": [
+     0.6526315789473685,
+     0.43157894736842106,
+     0.28421052631578947,
+     0.21052631578947367,
+     0.17894736842105263,
+     0.1368421052631579,
+     0.09473684210526316
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 28.0,
+    "gen_tokens": 283.0
+   },
+   "energy_j": 735.4708249999676,
+   "j_per_tok": 2.598836837455716,
+   "avg_w": 228.11382124355518,
+   "temp_c": 94.0,
+   "kind": "chat",
+   "effort": "medium"
+  },
+  {
+   "prompt": 31,
+   "cached": 0,
+   "completion": 158,
+   "reasoning": 118,
+   "ttft": 0.16878986358642578,
+   "visible": 1.747046947479248,
+   "total": 2.075998544692993,
+   "prefill_tps": 183.66031787286215,
+   "decode_tps": 82.31925617542187,
+   "text": "- Midnight Blue Notes  \n- The Late Set  \n- Velvet Hour Jazz  \n- After Hours Jazz Lounge  \n- Smoke & Swing",
+   "think_chars": 446,
+   "finish": "stop",
+   "tool_calls": [],
+   "t_start": 1795526445.6642702,
+   "t_end": 1795526447.7402687,
+   "spec": {
+    "drafts": 59.0,
+    "drafted": 413.0,
+    "accepted": 100.0,
+    "acceptance": 0.24213075060532688,
+    "mean_accepted_len": 2.694915254237288,
+    "per_pos": [
+     0.6101694915254238,
+     0.423728813559322,
+     0.2711864406779661,
+     0.2033898305084746,
+     0.0847457627118644,
+     0.06779661016949153,
+     0.03389830508474576
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 31.0,
+    "gen_tokens": 158.0
+   },
+   "energy_j": 469.44641200004844,
+   "j_per_tok": 2.9711798227851167,
+   "avg_w": 226.13041478286394,
+   "temp_c": 94.0,
+   "kind": "chat",
+   "effort": "medium"
+  },
+  {
+   "prompt": 35,
+   "cached": 0,
+   "completion": 547,
+   "reasoning": 279,
+   "ttft": 0.18628239631652832,
+   "visible": 2.6042919158935547,
+   "total": 4.254680871963501,
+   "prefill_tps": 187.88678206892138,
+   "decode_tps": 134.20514319536338,
+   "text": "```python\ndef fibonacci(n):\n    \"\"\"\n    Return the n-th Fibonacci number iteratively.\n\n    Uses the convention F(0) = 0 and F(1) = 1.\n\n    Args:\n        n (int): Index of the Fibonacci number to return (>= 0).\n\n    Returns:\n        int: The n-th Fibonacci number.\n\n    Raises:\n        TypeError: If n is not an integer.\n        ValueError: If n is negative.\n    \"\"\"\n    if isinstance(n, bool) or not ",
+   "think_chars": 834,
+   "finish": "stop",
+   "tool_calls": [],
+   "t_start": 1795526447.7543538,
+   "t_end": 1795526452.0090346,
+   "spec": {
+    "drafts": 122.0,
+    "drafted": 854.0,
+    "accepted": 427.0,
+    "acceptance": 0.5,
+    "mean_accepted_len": 4.5,
+    "per_pos": [
+     0.860655737704918,
+     0.6967213114754098,
+     0.5655737704918032,
+     0.4672131147540984,
+     0.3770491803278688,
+     0.28688524590163933,
+     0.2459016393442623
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 35.0,
+    "gen_tokens": 547.0
+   },
+   "energy_j": 969.8975829999545,
+   "j_per_tok": 1.7731217239487285,
+   "avg_w": 227.96012490411638,
+   "temp_c": 94.0,
+   "kind": "code",
+   "effort": "medium"
+  },
+  {
+   "prompt": 40,
+   "cached": 0,
+   "completion": 245,
+   "reasoning": 82,
+   "ttft": 0.16276812553405762,
+   "visible": 1.443993091583252,
+   "total": 2.8803799152374268,
+   "prefill_tps": 245.74836055128247,
+   "decode_tps": 89.78471499295082,
+   "text": "```js\nfunction debounce(fn, ms) {\n  let t;\n  return function (...args) {\n    clearTimeout(t);\n    t = setTimeout(() => fn.apply(this, args), ms);\n  };\n}\n```\n\nUsage:\n\n```js\nconst onSearch = debounce((query) => {\n  console.log('Searching for:', query);\n}, 300);\n\ninput.addEventListener('input', (e) => onSearch(e.target.value));\n```\n\nIt waits until `ms` milliseconds have passed since the last call bef",
+   "think_chars": 364,
+   "finish": "stop",
+   "tool_calls": [],
+   "t_start": 1795526452.0252829,
+   "t_end": 1795526454.9056628,
+   "spec": {
+    "drafts": 83.0,
+    "drafted": 581.0,
+    "accepted": 162.0,
+    "acceptance": 0.27882960413080893,
+    "mean_accepted_len": 2.951807228915663,
+    "per_pos": [
+     0.6626506024096386,
+     0.40963855421686746,
+     0.2891566265060241,
+     0.21686746987951808,
+     0.1566265060240964,
+     0.13253012048192772,
+     0.08433734939759036
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 40.0,
+    "gen_tokens": 245.0
+   },
+   "energy_j": 656.9708859999664,
+   "j_per_tok": 2.681513820408026,
+   "avg_w": 228.08480316243734,
+   "temp_c": 94.0,
+   "kind": "code",
+   "effort": "medium"
+  },
+  {
+   "prompt": 40,
+   "cached": 0,
+   "completion": 186,
+   "reasoning": 86,
+   "ttft": 0.17535805702209473,
+   "visible": 1.5210320949554443,
+   "total": 2.1725854873657227,
+   "prefill_tps": 228.10471716711646,
+   "decode_tps": 92.62840935855277,
+   "text": "```sql\nSELECT customer_id, SUM(amount) AS total_order_value\nFROM orders\nGROUP BY customer_id\nORDER BY total_order_value DESC\nLIMIT 3;\n```\n\nFor SQL Server, use:\n\n```sql\nSELECT TOP 3 customer_id, SUM(amount) AS total_order_value\nFROM orders\nGROUP BY customer_id\nORDER BY total_order_value DESC;\n```",
+   "think_chars": 377,
+   "finish": "stop",
+   "tool_calls": [],
+   "t_start": 1795526454.9203331,
+   "t_end": 1795526457.0929186,
+   "spec": {
+    "drafts": 60.0,
+    "drafted": 420.0,
+    "accepted": 128.0,
+    "acceptance": 0.3047619047619048,
+    "mean_accepted_len": 3.1333333333333333,
+    "per_pos": [
+     0.6666666666666666,
+     0.5166666666666667,
+     0.35,
+     0.2,
+     0.16666666666666666,
+     0.13333333333333333,
+     0.1
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 40.0,
+    "gen_tokens": 186.0
+   },
+   "energy_j": 495.23577899998054,
+   "j_per_tok": 2.6625579516127984,
+   "avg_w": 227.94766046258457,
+   "temp_c": 94.0,
+   "kind": "code",
+   "effort": "medium"
+  },
+  {
+   "prompt": 34,
+   "cached": 0,
+   "completion": 260,
+   "reasoning": 117,
+   "ttft": 0.18314003944396973,
+   "visible": 1.9975800514221191,
+   "total": 3.6530117988586426,
+   "prefill_tps": 185.6502821732876,
+   "decode_tps": 74.64252801195462,
+   "text": "Here are a few friendlier options:\n\n- \u201cThanks for reaching out\u2014I\u2019m not able to approve this request under our current policies, but I can help you explore next steps.\u201d\n- \u201cI understand you\u2019d like this, but it isn\u2019t something we can approve right now. If you\u2019d like, I can help you find a workable alternative.\u201d\n- \u201cI\u2019m sorry, but this request can\u2019t be approved because of our policies. I\u2019m happy to hel",
+   "think_chars": 511,
+   "finish": "stop",
+   "tool_calls": [],
+   "t_start": 1795526457.1052523,
+   "t_end": 1795526460.758264,
+   "spec": {
+    "drafts": 106.0,
+    "drafted": 742.0,
+    "accepted": 155.0,
+    "acceptance": 0.20889487870619947,
+    "mean_accepted_len": 2.4622641509433962,
+    "per_pos": [
+     0.5849056603773585,
+     0.330188679245283,
+     0.16981132075471697,
+     0.1320754716981132,
+     0.11320754716981132,
+     0.08490566037735849,
+     0.04716981132075472
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 34.0,
+    "gen_tokens": 260.0
+   },
+   "energy_j": 829.5954589999747,
+   "j_per_tok": 3.190751765384518,
+   "avg_w": 227.0990362689701,
+   "temp_c": 94.0,
+   "kind": "rewrite",
+   "effort": "medium"
+  },
+  {
+   "prompt": 34,
+   "cached": 0,
+   "completion": 323,
+   "reasoning": 283,
+   "ttft": 0.18554162979125977,
+   "visible": 4.421969652175903,
+   "total": 4.7919018268585205,
+   "prefill_tps": 183.24728546499824,
+   "decode_tps": 69.90334802845169,
+   "text": "French: Le serveur red\u00e9marrera \u00e0 minuit pour maintenance.  \nGerman: Der Server wird um Mitternacht f\u00fcr Wartungsarbeiten neu gestartet.",
+   "think_chars": 1105,
+   "finish": "stop",
+   "tool_calls": [],
+   "t_start": 1795526460.7707586,
+   "t_end": 1795526465.5626605,
+   "spec": {
+    "drafts": 137.0,
+    "drafted": 959.0,
+    "accepted": 187.0,
+    "acceptance": 0.19499478623566216,
+    "mean_accepted_len": 2.3649635036496353,
+    "per_pos": [
+     0.5474452554744526,
+     0.35766423357664234,
+     0.21897810218978103,
+     0.1386861313868613,
+     0.058394160583941604,
+     0.029197080291970802,
+     0.014598540145985401
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 34.0,
+    "gen_tokens": 323.0
+   },
+   "energy_j": 1092.9245000000228,
+   "j_per_tok": 3.3836671826626095,
+   "avg_w": 228.07739797050962,
+   "temp_c": 96.0,
+   "kind": "translate",
+   "effort": "medium"
+  },
+  {
+   "prompt": 47,
+   "cached": 0,
+   "completion": 520,
+   "reasoning": 287,
+   "ttft": 0.20235490798950195,
+   "visible": 2.69710373878479,
+   "total": 4.74439263343811,
+   "prefill_tps": 232.26518430893867,
+   "decode_tps": 114.26589371816355,
+   "text": "# Average Speed Calculation\n\n## Given\n- Distance (d) = 180 km\n- Time (t) = 2.5 hours\n\n## Step 1: Find speed in km/h\n\n$$v = \\frac{d}{t} = \\frac{180 \\text{ km}}{2.5 \\text{ h}}$$\n\n$$v = 72 \\text{ km/h}$$\n\n## Step 2: Convert km/h to m/s\n\nUse the conversion: 1 km/h = 1000 m / 3600 s = 5/18 m/s\n\n$$v = 72 \\text{ km/h} \\times \\frac{5}{18} \\text{ m/s}$$\n\n$$v = \\frac{72 \\times 5}{18} = \\frac{360}{18} = 20 \\",
+   "think_chars": 656,
+   "finish": "stop",
+   "tool_calls": [],
+   "t_start": 1795526465.584146,
+   "t_end": 1795526470.3285387,
+   "spec": {
+    "drafts": 140.0,
+    "drafted": 980.0,
+    "accepted": 382.0,
+    "acceptance": 0.38979591836734695,
+    "mean_accepted_len": 3.7285714285714286,
+    "per_pos": [
+     0.7857142857142857,
+     0.6142857142857143,
+     0.45714285714285713,
+     0.35,
+     0.2357142857142857,
+     0.17142857142857143,
+     0.11428571428571428
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 47.0,
+    "gen_tokens": 520.0
+   },
+   "energy_j": 1076.9118649999727,
+   "j_per_tok": 2.0709843557691783,
+   "avg_w": 226.98624422649627,
+   "temp_c": 94.0,
+   "kind": "math",
+   "effort": "medium"
+  },
+  {
+   "prompt": 31,
+   "cached": 0,
+   "completion": 278,
+   "reasoning": 140,
+   "ttft": 0.14974641799926758,
+   "visible": 2.626042604446411,
+   "total": 4.614129066467285,
+   "prefill_tps": 207.01663795491672,
+   "decode_tps": 62.0466527650927,
+   "text": "A mutex is a lock that lets only one thread use a shared resource at a time.\n\nAnalogy: think of a shared bathroom with one key. If one person has the key, everyone else waits. When they leave, they return the key, and someone else can go in.\n\nIn code, a thread \u201cacquires\u201d the mutex before touching shared data, then \u201creleases\u201d it afterward. That prevents two threads from changing the same data at th",
+   "think_chars": 637,
+   "finish": "stop",
+   "tool_calls": [],
+   "t_start": 1795526470.3468852,
+   "t_end": 1795526474.9610143,
+   "spec": {
+    "drafts": 135.0,
+    "drafted": 945.0,
+    "accepted": 145.0,
+    "acceptance": 0.15343915343915343,
+    "mean_accepted_len": 2.0740740740740744,
+    "per_pos": [
+     0.5259259259259259,
+     0.25925925925925924,
+     0.14074074074074075,
+     0.06666666666666667,
+     0.037037037037037035,
+     0.022222222222222223,
+     0.022222222222222223
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 31.0,
+    "gen_tokens": 278.0
+   },
+   "energy_j": 1054.5759279999766,
+   "j_per_tok": 3.7934385899279732,
+   "avg_w": 228.55362578910072,
+   "temp_c": 96.0,
+   "kind": "explain",
+   "effort": "medium"
+  },
+  {
+   "prompt": 35,
+   "cached": 0,
+   "completion": 175,
+   "reasoning": 117,
+   "ttft": 0.1773824691772461,
+   "visible": 1.253462791442871,
+   "total": 1.463306188583374,
+   "prefill_tps": 197.31374899865054,
+   "decode_tps": 135.31129208842776,
+   "text": "{\"title\":\"The Great Gatsby\",\"author\":\"F. Scott Fitzgerald\",\"year\":1925,\"tags\":[\"classic\",\"novel\",\"american-literature\"]}",
+   "think_chars": 400,
+   "finish": "stop",
+   "tool_calls": [],
+   "t_start": 1795526474.9770384,
+   "t_end": 1795526476.4403446,
+   "spec": {
+    "drafts": 39.0,
+    "drafted": 273.0,
+    "accepted": 135.0,
+    "acceptance": 0.4945054945054945,
+    "mean_accepted_len": 4.461538461538462,
+    "per_pos": [
+     0.7692307692307693,
+     0.6153846153846154,
+     0.5897435897435898,
+     0.46153846153846156,
+     0.4358974358974359,
+     0.38461538461538464,
+     0.20512820512820512
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 35.0,
+    "gen_tokens": 175.0
+   },
+   "energy_j": 329.8013309999951,
+   "j_per_tok": 1.8845790342856863,
+   "avg_w": 225.38094458499873,
+   "temp_c": 96.0,
+   "kind": "json",
+   "effort": "medium"
+  },
+  {
+   "prompt": 38,
+   "cached": 0,
+   "completion": 428,
+   "reasoning": 260,
+   "ttft": 0.18783283233642578,
+   "visible": 4.414814472198486,
+   "total": 6.4868292808532715,
+   "prefill_tps": 202.30754936356666,
+   "decode_tps": 67.7885760835031,
+   "text": "SQLite\n- Pros: zero setup, single file, fast for small/simple apps, easy deploy/backup, low overhead.\n- Cons: weaker under concurrent writes, file locking limits multi-user/high-traffic use, harder to scale/replicate, less suited to complex/large workloads.\n\nPostgreSQL\n- Pros: strong concurrency, ACID reliability, rich features (JSON, indexes, extensions), better for growth and multi-user apps.\n- ",
+   "think_chars": 1061,
+   "finish": "stop",
+   "tool_calls": [],
+   "t_start": 1795526476.452423,
+   "t_end": 1795526482.9392524,
+   "spec": {
+    "drafts": 192.0,
+    "drafted": 1344.0,
+    "accepted": 237.0,
+    "acceptance": 0.17633928571428573,
+    "mean_accepted_len": 2.234375,
+    "per_pos": [
+     0.5989583333333334,
+     0.3072916666666667,
+     0.14583333333333334,
+     0.08854166666666667,
+     0.052083333333333336,
+     0.036458333333333336,
+     0.005208333333333333
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 38.0,
+    "gen_tokens": 428.0
+   },
+   "energy_j": 1479.8357550000073,
+   "j_per_tok": 3.457560175233662,
+   "avg_w": 228.12928950788591,
+   "temp_c": 96.0,
+   "kind": "summary",
+   "effort": "medium"
+  },
+  {
+   "prompt": 36,
+   "cached": 0,
+   "completion": 799,
+   "reasoning": 530,
+   "ttft": 0.1766057014465332,
+   "visible": 7.097017526626587,
+   "total": 9.553961038589478,
+   "prefill_tps": 203.8439286225359,
+   "decode_tps": 85.09862016630495,
+   "text": "```bash\nfind . -type f -name '*.py' -print0 | xargs -0 -r cat | wc -l\n```\n\nHow it works:\n\n- `find .` starts at the current directory and walks the whole tree.\n- `-type f` matches regular files only.\n- `-name '*.py'` keeps only Python files.\n- `-print0` prints paths separated by NUL bytes, so filenames with spaces/newlines are handled safely.\n- `xargs -0 -r cat` reads those NUL-separated paths and ",
+   "think_chars": 1854,
+   "finish": "stop",
+   "tool_calls": [],
+   "t_start": 1795526482.9513729,
+   "t_end": 1795526492.505334,
+   "spec": {
+    "drafts": 280.0,
+    "drafted": 1960.0,
+    "accepted": 521.0,
+    "acceptance": 0.26581632653061227,
+    "mean_accepted_len": 2.8607142857142858,
+    "per_pos": [
+     0.7142857142857143,
+     0.4357142857142857,
+     0.25357142857142856,
+     0.18214285714285713,
+     0.11428571428571428,
+     0.08928571428571429,
+     0.07142857142857142
+    ],
+    "requests": 1.0,
+    "prompt_tokens": 36.0,
+    "gen_tokens": 799.0
+   },
+   "energy_j": 2187.6209720000043,
+   "j_per_tok": 2.737948650813522,
+   "avg_w": 228.9752871258285,
+   "temp_c": 96.0,
+   "kind": "shell",
+   "effort": "medium"
+  }
+ ],
+ "by_effort": {
+  "low": {
+   "ttft": {
+    "median": 0.1707676649093628,
+    "min": 0.13713765144348145,
+    "max": 0.22770380973815918,
+    "mean": 0.17578240235646567,
+    "n": 12
+   },
+   "visible": {
+    "median": 1.3899904489517212,
+    "min": 0.8811428546905518,
+    "max": 3.6350901126861572,
+    "mean": 1.8543767929077148,
+    "n": 12
+   },
+   "prefill_tps": {
+    "median": 205.07884230902735,
+    "min": 153.70845151974905,
+    "max": 278.5861391119772,
+    "mean": 205.54370814025208,
+    "n": 12
+   },
+   "decode_tps": {
+    "median": 82.73831254750574,
+    "min": 66.33263398933728,
+    "max": 125.44852741488178,
+    "mean": 89.05551348530082,
+    "n": 12
+   },
+   "total": {
+    "median": 2.43860924243927,
+    "min": 1.3516290187835693,
+    "max": 4.968150854110718,
+    "mean": 2.9057618975639343,
+    "n": 12
+   },
+   "j_per_tok": {
+    "median": 2.8802238393408635,
+    "min": 1.9624881449274034,
+    "max": 3.6126411709846407,
+    "mean": 2.8519994274225766,
+    "n": 12
+   },
+   "acceptance": 0.2572857142857143,
+   "mean_accepted_len": 2.801
+  },
+  "medium": {
+   "ttft": {
+    "median": 0.17699408531188965,
+    "min": 0.14974641799926758,
+    "max": 0.20235490798950195,
+    "mean": 0.17557352781295776,
+    "n": 12
+   },
+   "visible": {
+    "median": 2.615167260169983,
+    "min": 1.253462791442871,
+    "max": 7.097017526626587,
+    "mean": 2.890289783477783,
+    "n": 12
+   },
+   "prefill_tps": {
+    "median": 199.8106491811086,
+    "min": 183.24728546499824,
+    "max": 245.74836055128247,
+    "mean": 203.5314333299955,
+    "n": 12
+   },
+   "decode_tps": {
+    "median": 87.44166757962789,
+    "min": 62.0466527650927,
+    "max": 135.31129208842776,
+    "mean": 91.6466376550107,
+    "n": 12
+   },
+   "total": {
+    "median": 3.9538463354110718,
+    "min": 1.463306188583374,
+    "max": 9.553961038589478,
+    "mean": 4.159609695275624,
+    "n": 12
+   },
+   "j_per_tok": {
+    "median": 2.709731235610774,
+    "min": 1.7731217239487285,
+    "max": 3.7934385899279732,
+    "mean": 2.7671783258572944,
+    "n": 12
+   },
+   "acceptance": 0.27308602999210735,
+   "mean_accepted_len": 2.9116022099447516
+  }
+ },
+ "by_kind": {
+  "chat": {
+   "ttft": {
+    "median": 0.14958178997039795,
+    "min": 0.13713765144348145,
+    "max": 0.16878986358642578,
+    "mean": 0.15127277374267578,
+    "n": 4
+   },
+   "visible": {
+    "median": 2.123489022254944,
+    "min": 1.747046947479248,
+    "max": 2.8591225147247314,
+    "mean": 2.213286876678467,
+    "n": 4
+   },
+   "prefill_tps": {
+    "median": 194.75341108895407,
+    "min": 183.66031787286215,
+    "max": 209.34108721832595,
+    "mean": 195.62705681727405,
+    "n": 4
+   },
+   "decode_tps": {
+    "median": 79.42777096768845,
+    "min": 69.71819160091898,
+    "max": 91.76521727594113,
+    "mean": 80.08473770305925,
+    "n": 4
+   },
+   "total": {
+    "median": 2.6560916900634766,
+    "min": 2.075998544692993,
+    "max": 3.22413969039917,
+    "mean": 2.653080403804779,
+    "n": 4
+   },
+   "j_per_tok": {
+    "median": 3.037686339622276,
+    "min": 2.598836837455716,
+    "max": 3.4591234012343057,
+    "mean": 3.0333332294836435,
+    "n": 4
+   },
+   "acceptance": 0.23515769944341372,
+   "mean_accepted_len": 2.646103896103896
+  },
+  "code": {
+   "ttft": {
+    "median": 0.18554699420928955,
+    "min": 0.16276812553405762,
+    "max": 0.22770380973815918,
+    "mean": 0.19269045193990073,
+    "n": 6
+   },
+   "visible": {
+    "median": 1.3992208242416382,
+    "min": 0.881540060043335,
+    "max": 2.6042919158935547,
+    "mean": 1.4924020767211914,
+    "n": 6
+   },
+   "prefill_tps": {
+    "median": 202.16171095974025,
+    "min": 153.70845151974905,
+    "max": 245.74836055128247,
+    "mean": 202.3918518350979,
+    "n": 6
+   },
+   "decode_tps": {
+    "median": 96.59163312960136,
+    "min": 89.78471499295082,
+    "max": 134.20514319536338,
+    "mean": 105.87501020349191,
+    "n": 6
+   },
+   "total": {
+    "median": 2.3742618560791016,
+    "min": 2.0061137676239014,
+    "max": 4.254680871963501,
+    "mean": 2.677047292391459,
+    "n": 6
+   },
+   "j_per_tok": {
+    "median": 2.562926977692004,
+    "min": 1.7731217239487285,
+    "max": 2.681513820408026,
+    "mean": 2.3675892660468274,
+    "n": 6
+   },
+   "acceptance": 0.3782071586949636,
+   "mean_accepted_len": 3.647450110864745
+  },
+  "explain": {
+   "ttft": {
+    "median": 0.1612863540649414,
+    "min": 0.14974641799926758,
+    "max": 0.17282629013061523,
+    "mean": 0.1612863540649414,
+    "n": 2
+   },
+   "visible": {
+    "median": 2.0257874727249146,
+    "min": 1.425532341003418,
+    "max": 2.626042604446411,
+    "mean": 2.0257874727249146,
+    "n": 2
+   },
+   "prefill_tps": {
+    "median": 193.19374813459478,
+    "min": 179.37085831427285,
+    "max": 207.01663795491672,
+    "mean": 193.19374813459478,
+    "n": 2
+   },
+   "decode_tps": {
+    "median": 64.18964337721499,
+    "min": 62.0466527650927,
+    "max": 66.33263398933728,
+    "mean": 64.18964337721499,
+    "n": 2
+   },
+   "total": {
+    "median": 3.8407291173934937,
+    "min": 3.067329168319702,
+    "max": 4.614129066467285,
+    "mean": 3.8407291173934937,
+    "n": 2
+   },
+   "j_per_tok": {
+    "median": 3.703039880456307,
+    "min": 3.6126411709846407,
+    "max": 3.7934385899279732,
+    "mean": 3.703039880456307,
+    "n": 2
+   },
+   "acceptance": 0.1600765306122449,
+   "mean_accepted_len": 2.1205357142857144
+  },
+  "json": {
+   "ttft": {
+    "median": 0.17672014236450195,
+    "min": 0.1760578155517578,
+    "max": 0.1773824691772461,
+    "mean": 0.17672014236450195,
+    "n": 2
+   },
+   "visible": {
+    "median": 1.1820963621139526,
+    "min": 1.1107299327850342,
+    "max": 1.253462791442871,
+    "mean": 1.1820963621139526,
+    "n": 2
+   },
+   "prefill_tps": {
+    "median": 198.05604030832802,
+    "min": 197.31374899865054,
+    "max": 198.79833161800553,
+    "mean": 198.05604030832802,
+    "n": 2
+   },
+   "decode_tps": {
+    "median": 127.62649239208761,
+    "min": 119.94169269574745,
+    "max": 135.31129208842776,
+    "mean": 127.62649239208761,
+    "n": 2
+   },
+   "total": {
+    "median": 1.4074676036834717,
+    "min": 1.3516290187835693,
+    "max": 1.463306188583374,
+    "mean": 1.4074676036834717,
+    "n": 2
+   },
+   "j_per_tok": {
+    "median": 2.006328503058338,
+    "min": 1.8845790342856863,
+    "max": 2.12807797183099,
+    "mean": 2.006328503058338,
+    "n": 2
+   },
+   "acceptance": 0.46095238095238095,
+   "mean_accepted_len": 4.226666666666667
+  },
+  "math": {
+   "ttft": {
+    "median": 0.18553197383880615,
+    "min": 0.16870903968811035,
+    "max": 0.20235490798950195,
+    "mean": 0.18553197383880615,
+    "n": 2
+   },
+   "visible": {
+    "median": 1.789123296737671,
+    "min": 0.8811428546905518,
+    "max": 2.69710373878479,
+    "mean": 1.789123296737671,
+    "n": 2
+   },
+   "prefill_tps": {
+    "median": 255.42566171045794,
+    "min": 232.26518430893867,
+    "max": 278.5861391119772,
+    "mean": 255.42566171045794,
+    "n": 2
+   },
+   "decode_tps": {
+    "median": 114.82524479122951,
+    "min": 114.26589371816355,
+    "max": 115.38459586429546,
+    "mean": 114.82524479122951,
+    "n": 2
+   },
+   "total": {
+    "median": 3.51821768283844,
+    "min": 2.2920427322387695,
+    "max": 4.74439263343811,
+    "mean": 3.51821768283844,
+    "n": 2
+   },
+   "j_per_tok": {
+    "median": 2.0893065782910965,
+    "min": 2.0709843557691783,
+    "max": 2.107628800813014,
+    "mean": 2.0893065782910965,
+    "n": 2
+   },
+   "acceptance": 0.3878536922015183,
+   "mean_accepted_len": 3.714975845410628
+  },
+  "rewrite": {
+   "ttft": {
+    "median": 0.18160128593444824,
+    "min": 0.18006253242492676,
+    "max": 0.18314003944396973,
+    "mean": 0.18160128593444824,
+    "n": 2
+   },
+   "visible": {
+    "median": 1.5003798007965088,
+    "min": 1.0031795501708984,
+    "max": 1.9975800514221191,
+    "mean": 1.5003798007965088,
+    "n": 2
+   },
+   "prefill_tps": {
+    "median": 187.23678670252332,
+    "min": 185.6502821732876,
+    "max": 188.82329123175904,
+    "mean": 187.23678670252332,
+    "n": 2
+   },
+   "decode_tps": {
+    "median": 73.61526002488137,
+    "min": 72.58799203780812,
+    "max": 74.64252801195462,
+    "mean": 73.61526002488137,
+    "n": 2
+   },
+   "total": {
+    "median": 3.032424211502075,
+    "min": 2.411836624145508,
+    "max": 3.6530117988586426,
+    "mean": 3.032424211502075,
+    "n": 2
+   },
+   "j_per_tok": {
+    "median": 3.267701158765786,
+    "min": 3.190751765384518,
+    "max": 3.344650552147054,
+    "mean": 3.267701158765786,
+    "n": 2
+   },
+   "acceptance": 0.20408163265306123,
+   "mean_accepted_len": 2.428571428571429
+  },
+  "shell": {
+   "ttft": {
+    "median": 0.17045509815216064,
+    "min": 0.16430449485778809,
+    "max": 0.1766057014465332,
+    "mean": 0.17045509815216064,
+    "n": 2
+   },
+   "visible": {
+    "median": 5.211053729057312,
+    "min": 3.325089931488037,
+    "max": 7.097017526626587,
+    "mean": 5.211053729057312,
+    "n": 2
+   },
+   "prefill_tps": {
+    "median": 211.47465801925017,
+    "min": 203.8439286225359,
+    "max": 219.10538741596446,
+    "mean": 211.47465801925017,
+    "n": 2
+   },
+   "decode_tps": {
+    "median": 87.01947975068072,
+    "min": 85.09862016630495,
+    "max": 88.94033933505646,
+    "mean": 87.01947975068072,
+    "n": 2
+   },
+   "total": {
+    "median": 7.1303181648254395,
+    "min": 4.706675291061401,
+    "max": 9.553961038589478,
+    "mean": 7.1303181648254395,
+    "n": 2
+   },
+   "j_per_tok": {
+    "median": 2.697101736517907,
+    "min": 2.6562548222222917,
+    "max": 2.737948650813522,
+    "mean": 2.697101736517907,
+    "n": 2
+   },
+   "acceptance": 0.27064063035286057,
+   "mean_accepted_len": 2.8944844124700237
+  },
+  "summary": {
+   "ttft": {
+    "median": 0.17662203311920166,
+    "min": 0.16541123390197754,
+    "max": 0.18783283233642578,
+    "mean": 0.17662203311920166,
+    "n": 2
+   },
+   "visible": {
+    "median": 3.8272489309310913,
+    "min": 3.2396833896636963,
+    "max": 4.414814472198486,
+    "mean": 3.8272489309310913,
+    "n": 2
+   },
+   "prefill_tps": {
+    "median": 216.01900814748237,
+    "min": 202.30754936356666,
+    "max": 229.73046693139807,
+    "mean": 216.01900814748237,
+    "n": 2
+   },
+   "decode_tps": {
+    "median": 68.77021579248812,
+    "min": 67.7885760835031,
+    "max": 69.75185550147313,
+    "mean": 68.77021579248812,
+    "n": 2
+   },
+   "total": {
+    "median": 5.727490067481995,
+    "min": 4.968150854110718,
+    "max": 6.4868292808532715,
+    "mean": 5.727490067481995,
+    "n": 2
+   },
+   "j_per_tok": {
+    "median": 3.4154770027954147,
+    "min": 3.3733938303571667,
+    "max": 3.457560175233662,
+    "mean": 3.4154770027954147,
+    "n": 2
+   },
+   "acceptance": 0.17994100294985252,
+   "mean_accepted_len": 2.2595870206489677
+  },
+  "translate": {
+   "ttft": {
+    "median": 0.17530179023742676,
+    "min": 0.16506195068359375,
+    "max": 0.18554162979125977,
+    "mean": 0.17530179023742676,
+    "n": 2
+   },
+   "visible": {
+    "median": 4.02852988243103,
+    "min": 3.6350901126861572,
+    "max": 4.421969652175903,
+    "mean": 4.02852988243103,
+    "n": 2
+   },
+   "prefill_tps": {
+    "median": 194.6152766590071,
+    "min": 183.24728546499824,
+    "max": 205.98326785301595,
+    "mean": 194.6152766590071,
+    "n": 2
+   },
+   "decode_tps": {
+    "median": 70.37206469669255,
+    "min": 69.90334802845169,
+    "max": 70.8407813649334,
+    "mean": 70.37206469669255,
+    "n": 2
+   },
+   "total": {
+    "median": 4.398280024528503,
+    "min": 4.004658222198486,
+    "max": 4.7919018268585205,
+    "mean": 4.398280024528503,
+    "n": 2
+   },
+   "j_per_tok": {
+    "median": 3.36667740268661,
+    "min": 3.3496876227106105,
+    "max": 3.3836671826626095,
+    "mean": 3.36667740268661,
+    "n": 2
+   },
+   "acceptance": 0.1961451247165533,
+   "mean_accepted_len": 2.373015873015873
+  }
+ },
+ "_phase": {
+  "name": "burst",
+  "seconds": 85.12676572799683,
+  "server_requests": 24.0
+ }
+}
